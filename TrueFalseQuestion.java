@@ -13,13 +13,13 @@ public class TrueFalseQuestion extends Question {
         String answer = JOptionPane.showInputDialog(question);
         answer = answer.toUpperCase();
         if (answer.equals("T") || answer.equals("TRUE") || answer.equals("Y") || answer.equals("YES")) {
-            answer = "T";
+            answer = "TRUE";
         } else if (answer.equals("F") || answer.equals("FALSE") || answer.equals("N") || answer.equals("NO")) {
-            answer = "F";
+            answer = "FALSE";
         }
         System.out.println("Answer: " + answer);
 
-        if (answer.equals("T") || answer.equals("F")) {
+        if (answer.equals("TRUE") || answer.equals("FALSE")) {
             return answer;
         } else {
             JOptionPane.showMessageDialog(null, "Invalid answer. Please enter True or False.");
