@@ -4,7 +4,7 @@ public abstract class Question {
 
     static int nQuestions = 0;
     static int nCorrect = 0;
-    String question;
+    QuestionDialog question;
     String correctAnswer;
 
     abstract String ask();
