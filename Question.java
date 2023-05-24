@@ -1,4 +1,3 @@
-import javax.swing.JOptionPane;
 import java.awt.*;
 import javax.swing.*;
 
@@ -9,7 +8,22 @@ public abstract class Question {
     QuestionDialog question;
     String correctAnswer;
 
-    abstract String ask();
+    Question(String question){
+        this.question = new QuestionDialog();
+        this.question.setLayout(new GridLayout(0, 1));
+        this.question.add(new JLabel("     " + question + "     ", JLabel.CENTER));
+    }
+
+    String ask() {
+        question.setVisible(true);
+        return question.answer;
+    }
+
+    void initQuestionDialog() {
+        question.setModal(true);
+        question.pack();
+        question.setLocationRelativeTo(null);
+    }
     
 
     void check() {
